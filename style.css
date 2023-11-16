@@ -1,0 +1,238 @@
+
+* {
+    
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	font-family:'Dancing Script', cursive;
+}
+body {
+    margin: 0;
+    padding: 0;
+	display: flex;
+	flex-direction: column;
+	background-image: url(pngwing.com\ \(2\).png);
+}
+
+
+.hero{
+    position: absolute;
+    top: 3%;
+    left: 7%;
+    padding: 50px;
+    width: 1100px;
+    background-color:transparent;
+    box-shadow: 0 30px 50px #666565;
+}
+
+header {
+    width: 1000px;
+	padding: 2rem 1rem;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: #0F2C59;
+	margin-bottom: 1rem;
+	text-decoration:underline;
+
+}
+
+#task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	
+}
+
+#task-input {
+	flex: 1 1 0%;
+	background-color: #4F6F52;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #FAF8ED;
+	font-size: 1.25rem;
+}
+
+#task-input::placeholder {
+	color: #FAF8ED;
+}
+
+.priority{
+	padding: 10px;
+}
+#task-priority{
+	background-color:  #4F6F52;
+	color: rgb(109, 94, 8);
+	font-size: 1.2rem;
+	padding: 10px;
+	border-radius: 1rem;
+	cursor: pointer;
+	transition: 0.4s;	
+}
+
+#task-priority::placeholder{
+	color: #FAF8ED;
+}
+
+#task-due-date{
+	background-color: #4F6F52;
+	color:#FAF8ED;
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 10px;
+	border-radius: 1rem;
+	cursor: pointer;
+	transition: 0.4s;	
+}
+
+#task-due-date::placeholder{
+	color: #FAF8ED;
+}
+
+#task-submit {
+	padding-left: 5px;
+	color: #FAF8ED;
+	background-color: #739072;
+	border-radius: 1rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.4s;
+	flex: 0.2;
+
+}
+
+#task-submit:hover {
+	opacity: 0.8;
+	background-color: #143113;
+}
+
+#task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+    width: 1000px;
+    padding: 2rem 1rem;
+    height: auto;
+    margin: 0 auto;
+    background-color: #4F6F52;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #FAF8ED;
+	margin-bottom: 1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: #99B080;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: #FAF8ED;
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+	background: none; 
+}
+
+.task .content .text:not(:read-only) {
+	color: white;
+}
+
+.task .actions {
+	display: flex;
+	
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 550;
+	text-transform: uppercase;
+	transition: 0.4s;
+	background: none; 
+}
+
+.task .actions .delete {
+	color: crimson;
+}
+
+
+@media only screen and (max-width: 768px) {
+	body {
+		flex-direction: column;
+	}
+	.hero {
+		padding: 15px;
+		width: 95%;
+		left: 2%;
+		right: 2%;
+		top: 3%;
+	}
+	header {
+		font-size: 2.0rem;
+		width: 90%;
+		padding-top: 2rem;
+		padding-bottom: 0rem;
+		padding-left: 0rem;
+		padding-right: 0rem;
+	}
+	.priority{
+		padding-left: 1rem;
+	}
+	#task-priority{
+		
+		margin-bottom: 1rem;
+	}
+	main {
+		width: 90%;
+	}
+	.task-list {
+		
+		width: 90%;
+	}
+	.task-list h2 {
+		font-size: 1.2rem;
+	}
+	#tasks .task {
+		flex-direction: column;
+	}
+	.task .content .text {
+		font-size: 1rem;
+	}
+	.task .actions button {
+		font-size: 1rem;
+	}
+	#task-submit{
+		font-size: 1rem;
+		font-weight: 500;
+		flex: 0.1;
+
+	}
+}
