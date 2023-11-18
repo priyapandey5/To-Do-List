@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+        <h1>YOUR MIND MAP</h1>
+        <div id="task-form">
+            <input type="text" id="task-input" placeholder="Planning Something..?">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+      </header>
+
+        <div class="priority">
+            <select id="priority-input">
+                <option disabled selected value>Choose Priority</option>
+                <option value="low" >Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="date" id="date-input">
+        </div>
+        
+        <main>
+            <section class="task-list">
+                <h2> Your Tasks</h2>
+              <ul id="task-list"></ul>
+            </section>
+    </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
